@@ -2,6 +2,7 @@ const express = require('express');
 const app = express();
 
 app.use(express.json());
+app.use(express.static(__dirname));
 
 let books = [
   { id: 1, title: 'Learn HTML', author: 'John Doe' },

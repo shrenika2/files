@@ -3,6 +3,7 @@ const mysql = require('mysql2');
 
 const app = express();
 app.use(express.json());
+app.use(express.static(__dirname));
 
 const db = mysql.createConnection({
   host: 'localhost',

@@ -3,6 +3,7 @@ const mysql = require('mysql2');
 
 const app = express();
 app.use(express.json());
+app.use(express.static(__dirname)); // Serve index.html
 
 // Basic connection (student level)
 const db = mysql.createConnection({
